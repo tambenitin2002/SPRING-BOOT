@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="c1" class="edu.jsp.setter_injection.ClassRoom">
+          <property name="classRoomNo" value="801"></property>
+          <property name="flour" value="801"></property>
+        </bean>
+        
+        <bean id="s1" class="edu.jsp.setter_injection.Student">
+          <property name="rollNo" value="01"></property>
+          <property name="name" value="nitin"></property>
+          <property name="mobile" value="95264149"></property>
+          <property name="email" value="nitin@gmail.com"></property>
+          <property name="classroom" ref="c1" ></property>
+        </bean>
+</beans>

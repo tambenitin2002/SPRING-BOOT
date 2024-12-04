@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="a1" class="edu.jsp.constructor_injection.Address">
+          <constructor-arg value="Pune"></constructor-arg>
+          <constructor-arg value="ramtekadi"></constructor-arg>
+          <constructor-arg value="164464"></constructor-arg>
+          
+        </bean>
+        <bean id="b1" class="edu.jsp.constructor_injection.Bank">
+          <constructor-arg value="12"></constructor-arg>
+          <constructor-arg value="Nitin"></constructor-arg>
+          <constructor-arg value="pune"></constructor-arg>
+          <constructor-arg value="259259"></constructor-arg>
+          
+        </bean>
+         <bean id="c1" class="edu.jsp.constructor_injection.Customer" autowired="">
+          <constructor-arg value="122"></constructor-arg>
+          <constructor-arg value="Nitin"></constructor-arg>
+          <constructor-arg value="12852125"></constructor-arg>
+          <!--  to inject address object into customer object -->
+          <constructor-arg ref="a1"></constructor-arg>
+          <constructor-arg ref="b1"></constructor-arg>
+          
+        </bean>
+       
+        
+        
+        </beans>

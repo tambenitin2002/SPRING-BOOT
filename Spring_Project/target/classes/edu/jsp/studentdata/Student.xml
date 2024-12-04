@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="stud" class="edu.jsp.studentdata.Student" scope="prototype">
+        <constructor-arg index="1" value="Nitin"></constructor-arg>
+        <constructor-arg index="2" value="50"></constructor-arg>
+        <constructor-arg index="0" value="01"></constructor-arg>
+       
+    </bean>
+    <!--  
+    <bean id="stud2" class="edu.jsp.studentdata.Student" scope="prototype">
+        <constructor-arg index="3" value="comp"></constructor-arg>
+        <constructor-arg index="1"  value="Nitin"></constructor-arg>
+        <constructor-arg index="2" value="80"></constructor-arg>
+        <constructor-arg index="0" value="02"></constructor-arg>
+    </bean>
+     -->
+      <bean id="stud2" class="edu.jsp.studentdata.Student" scope="prototype">
+        <constructor-arg name="rollNo" value="02"></constructor-arg>
+        <constructor-arg name="fullName" value="Nitin"></constructor-arg>
+        <constructor-arg name="percentage" value="80"></constructor-arg>
+        <constructor-arg name="degree" value="comp"></constructor-arg>
+    </bean>
+</beans>
