@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean definitions -->
+    <bean id="board" class="edu.jsp.constructor.Board"></bean>
+    <bean id="b2" class="edu.jsp.constructor.Board"></bean>
+
+    <!-- Explicitly injecting board bean into ClassRoom bean using constructor-arg -->
+    <bean id="c1" class="edu.jsp.constructor.ClassRoom" autowire="constructor">
+        <constructor-arg ref="board" />
+    </bean>
+
+</beans>
