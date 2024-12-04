@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- applicationContext.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean definition for EmployeeDao -->
+    <bean id="employeeDao" class="edu.jsp.xmlconfig.EmployeeDao"/>
+
+    <!-- Bean definition for EmployeeService with EmployeeDao dependency -->
+    <bean id="employeeService" class="edu.jsp.xmlconfig.EmployeeService">
+        <property name="employeeDao" ref="employeeDao"/>
+    </bean>
+</beans>
