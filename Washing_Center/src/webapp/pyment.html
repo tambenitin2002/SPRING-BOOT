@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Washing Center</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-[#173F5F] text-white shadow-lg">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <h1 class="text-xl font-bold">Washing Center</h1>
+            <nav class="space-x-4">
+                <a href="home.jsp" class="hover:text-[#F6D55C]">Home</a>
+                <a href="services.jsp" class="hover:text-[#F6D55C]">Services</a>
+                <a href="payment.jsp" class="hover:text-[#F6D55C]">Payment</a>
+                <a href="contact.jsp" class="hover:text-[#F6D55C]">Contact</a>
+                <a href="logout.jsp" class="hover:text-[#F6D55C]">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Payment Form -->
+    <main class="container mx-auto mt-10 p-6">
+        <h2 class="text-3xl font-bold text-center mb-6">Secure Payment</h2>
+        <form action="/processPayment" method="POST" class="bg-white p-8 shadow-md rounded-lg max-w-lg mx-auto">
+            <div class="mb-4">
+                <label for="name" class="block font-semibold mb-2">Name on Card</label>
+                <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#20639B]" required>
+            </div>
+            <div class="mb-4">
+                <label for="cardNumber" class="block font-semibold mb-2">Card Number</label>
+                <input type="text" id="cardNumber" name="cardNumber" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#20639B]" maxlength="16" required>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label for="expiry" class="block font-semibold mb-2">Expiry Date</label>
+                    <input type="text" id="expiry" name="expiry" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#20639B]" placeholder="MM/YY" required>
+                </div>
+                <div>
+                    <label for="cvv" class="block font-semibold mb-2">CVV</label>
+                    <input type="password" id="cvv" name="cvv" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#20639B]" maxlength="3" required>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="amount" class="block font-semibold mb-2">Amount</label>
+                <input type="text" id="amount" name="amount" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#20639B]" value="₹500" readonly>
+            </div>
+            <button type="submit" class="w-full bg-[#173F5F] text-white py-3 rounded-lg hover:bg-[#20639B]">
+                Make Payment
+            </button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#173F5F] text-white text-center py-4 mt-10">
+        <p>&copy; 2024 Washing Center. All rights reserved.</p>
+    </footer>
+</body>
+</html>
